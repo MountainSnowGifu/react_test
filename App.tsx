@@ -9,7 +9,7 @@ import { TodoType } from "./types/todo";
 import { Text } from "./Text";
 import { UserProfile } from "./UserProfile";
 import { User } from "./types/user";
-import { TodoTable } from "./todoTable";
+import { TodoTableData, TodoTableHeader } from "./todoTable";
 
 const user: User = { name: "太郎", hobbies: ["映画", "ゲーム"] };
 
@@ -30,9 +30,39 @@ function App() {
 
   return (
     <div className="App">
+      {/*
       <UserProfile user={user} />
+      */}
       <Text color="red" fontSize="18" />
-      <button onClick={onClickFetchData}>データ取得1</button>
+      <table>
+        <tr>
+          <td>
+            <button onClick={onClickFetchData} className="border_btn01">
+              データ取得
+            </button>
+          </td>
+          <td>
+            <button onClick={onClickFetchData} className="border_btn01">
+              データ取得
+            </button>
+          </td>
+          <td>
+            <button onClick={onClickFetchData} className="border_btn01">
+              データ取得
+            </button>
+          </td>
+          <td>
+            <button onClick={onClickFetchData} className="border_btn01">
+              データ取得
+            </button>
+          </td>
+          <td>
+            <button onClick={onClickFetchData} className="border_btn01">
+              データ取得
+            </button>
+          </td>
+        </tr>
+      </table>
       {/* {todos.map((todo) => (
         <Todo
           key={todo.id}
@@ -42,13 +72,9 @@ function App() {
         />
       ))} */}
       <table>
-        <tr>
-          <th>名前</th>
-          <th>ID</th>
-        </tr>
-
+        <TodoTableHeader />
         {todos.map((todo) => (
-          <TodoTable
+          <TodoTableData
             key={todo.id}
             title={todo.title}
             userId={todo.userId}

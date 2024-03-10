@@ -7,5 +7,5 @@ type Props = {
 
 export const Text: FC<Props> = (props) => {
   const { color, fontSize } = props;
-  return <p style={{ color, fontSize }}>テキストです</p>;
+  return <p style={{ color, fontSize }}>データ検索</p>;
 };

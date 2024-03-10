@@ -39,3 +39,24 @@
 .read-the-docs {
   color: #888;
 }
+
+.border_btn01 {
+  display: inline-block;
+  width: 100%;
+  max-width: 350px; /* ボタン幅 */
+  color: #4d9bc1; /* 文字色 */
+  border: 2px solid #4d9bc1; /* 線幅・種類・色 */
+  background: #fff; /* 背景色 */
+  padding: 1em 2em;
+  font-weight: bold; /* 文字の太さ */
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+  margin: 1px;
+}
+
+/* マウスオーバーした際のデザイン */
+.border_btn01:hover {
+  color: #fff; /* 文字色 */
+  background: #4d9bc1; /* 背景色 */
+}
